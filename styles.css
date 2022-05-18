@@ -1,0 +1,311 @@
+:root {
+    --main-font: 'El Messiri', sans-serif;
+    --titles-font: 'Lalezar', cursive;
+    --clr1: #1B1A17;
+    --clr2r: #F0A500;
+    --clr3: #E6D5B8;
+}
+
+/* global style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr2r);
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--clr1);
+    color: var(--clr2r);
+    font-family: var(--main-font);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 0px 5%;
+    overflow: hidden;
+}
+
+.title {
+    font-family: var(--titles-font);
+    font-size: 4.4rem;
+    color: var(--clr3);
+}
+
+.hide {
+    height: 0 !important;
+    padding: 0px !important;
+}
+
+.show {
+    height: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* nav style */
+.nav-container {
+    background-color: var(--clr3);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+nav .logo img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 1.5rem;
+}
+
+nav .nav-links a {
+    color: var(--clr1);
+    transition: border-bottom 0.1s ease-in-out;
+}
+
+nav .nav-links a:hover {
+    border-bottom: 5px solid var(--clr1);
+}
+
+nav.mobile {
+    display: none;
+    flex-direction: column;
+}
+
+nav.mobile .nav-header {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-links {
+    flex-direction: column;
+    width: 100%;
+    padding-inline-start: 15px;
+    align-items: flex-start;
+    padding-bottom: 15px;
+}
+
+
+/* header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+/* services */
+.services {
+    margin-top: 70px;
+}
+
+.overaly {
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr3);
+    color: var(--clr1);
+}
+
+.services-title {
+    margin: 30px;
+    color: var(--clr1);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    gap: 15px;
+}
+
+.service {
+    min-width: 280px;
+    border-radius: 7px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.service:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.service img {
+    width: 100%;
+    height: 200px;
+}
+
+.service .service-text {
+    padding-inline-start: 15px;
+    padding-bottom: 15px;
+}
+
+/* contact */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px 0;
+}
+
+.contact .contact-item:hover a {
+    color: var(--clr3);
+}
+
+.contact svg {
+    transform: translateY(3px);
+}
+
+@media screen and (max-width:1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 33.33%);
+    }
+}
+
+@media screen and (max-width:920px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    nav.mobile {
+        display: flex;
+    }
+
+    nav.pc {
+        display: none;
+    }
+
+    header {
+        margin: 50px 0;
+        flex-direction: column-reverse;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    header img {
+        max-width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 50%);
+    }
+}
+
+@media screen and (max-width:620px) {
+    .services-grid {
+        grid-template-columns: repeat(1, 100%);
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* loader */
+.loader {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--clr1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hide-loader{
+    display: none;
+}
+
+.car__body {
+    animation: shake 0.2s ease-in-out infinite alternate;
+
+}
+
+.car__line {
+    transform-origin: center right;
+    stroke-dasharray: 22;
+    animation: line 0.8s ease-in-out infinite;
+    animation-fill-mode: both;
+}
+
+.car__line--top {
+    animation-delay: 0s;
+}
+
+.car__line--middle {
+    animation-delay: 0.2s;
+}
+
+.car__line--bottom {
+    animation-delay: 0.4s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-1%);
+    }
+
+    100% {
+        transform: translateY(3%);
+    }
+}
+
+@keyframes line {
+    0% {
+        stroke-dashoffset: 22;
+    }
+
+    25% {
+        stroke-dashoffset: 22;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    51% {
+        stroke-dashoffset: 0;
+    }
+
+    80% {
+        stroke-dashoffset: -22;
+    }
+
+    100% {
+        stroke-dashoffset: -22;
+    }
+}
