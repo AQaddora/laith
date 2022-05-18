@@ -1,17 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alaith Delivery Services</title>
-    <link rel="icon" type="image/png" href="res/logos/l.png">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&family=Lalezar&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Laith</title>
 </head>
-<body>
-    <img src="res/logos/logo-with-tag-white.png" alt="Delivery">
-    <img src="res/bg.jpg" alt="Delivery">
-    <img src="res/delivery.jpg" alt="Delivery">
-    <img src="res/door.jpg" alt="Delivery">
-    <img src="res/package.jpg" alt="Delivery">
+
+<body dir="rtl">
+    <div class="loader">
+        <svg class="car" width="102" height="40" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(2 1)" stroke="#F0A500" fill="none" fill-rule="evenodd" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path class="car__body"
+                    d="M47.293 2.375C52.927.792 54.017.805 54.017.805c2.613-.445 6.838-.337 9.42.237l8.381 1.863c2.59.576 6.164 2.606 7.98 4.531l6.348 6.732 6.245 1.877c3.098.508 5.609 3.431 5.609 6.507v4.206c0 .29-2.536 4.189-5.687 4.189H36.808c-2.655 0-4.34-2.1-3.688-4.67 0 0 3.71-19.944 14.173-23.902zM36.5 15.5h54.01"
+                    stroke-width="3" />
+                <ellipse class="car__wheel--left" stroke-width="3.2" fill="#FFF" cx="83.493" cy="30.25" rx="6.922"
+                    ry="6.808" />
+                <ellipse class="car__wheel--right" stroke-width="3.2" fill="#FFF" cx="46.511" cy="30.25" rx="6.922"
+                    ry="6.808" />
+                <path class="car__line car__line--top" d="M22.5 16.5H2.475" stroke-width="3" />
+                <path class="car__line car__line--middle" d="M20.5 23.5H.4755" stroke-width="3" />
+                <path class="car__line car__line--bottom" d="M25.5 9.5h-19" stroke-width="3" />
+            </g>
+        </svg>
+    </div>
+    <!-- nav bar -->
+    <div class="container nav-container">
+        <!-- for pc -->
+        <nav class="pc">
+            <ul class="nav-links pc">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="logo"><img src="./images/l.png" /></div>
+        </nav>
+        <!-- for mobile -->
+        <nav class="mobile">
+            <div class="nav-header">
+                <svg onClick="show('mobile-links')" stroke="currentColor" fill="#1B1A17" viewBox="0 0 448 512"
+                    height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                    </path>
+                </svg>
+                <div class="logo"><img src="./images/l.png" /></div>
+            </div>
+            <ul class="nav-links mobile-links hide">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- header -->
+    <header class="container">
+        <div class="header-text">
+            <h1 class="title">بنوصلّك وين ما تكون</h1>
+            <p>تبغى شاورما بثوم زيادة؟ الشلة مجتمعة عندك؟ يومك مشغول بالدوام؟
+                لاتشيل هم، نحن في الخدمة. اطلب الي تبيه ونوصله لك.</p>
+        </div>
+        <div><img src="./images/header3.svg"></div>
+    </header>
+    <script src="./index.js"></script>
+
+    <!-- our services -->
+    <article class="services" id="services">
+        <div class="container overaly">
+            <h1 class="title center services-title">-- خدماتنا --</h1>
+            <div class="services-grid">
+                <div class="service">
+                    <img src="./images/services/s1.svg">
+                    <div class="service-text">
+                        <h3>توصيل طلبات المنازل</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s2.svg">
+                    <div class="service-text">
+                        <h3>توصيل طلبات الشركات</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s3.svg">
+                    <div class="service-text">
+                        <h3>توصيل منتجات المتاجر الإلكترونية</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s4.svg">
+                    <div class="service-text">
+                        <h3>توصيل الطعام الطازج</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s5.svg">
+                    <div class="service-text">
+                        <h3>توصيل يومي وفوري</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s6.svg">
+                    <div class="service-text">
+                        <h3>اشتراكات شهرية</h3>
+                    </div>
+                </div>
+                <div class="service">
+                    <img src="./images/services/s7.svg">
+                    <div class="service-text">
+                        <h3>توصيل منتجات أستهلاكية</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- footer -->
+    <footer class="container" id="contact">
+        <div class="contact">
+            <div class="contact-item">
+                <a href="https://wa.me/+971552438530?text=أريد%20ان%20اطلب%20خدمة%20التوصيل" dir="ltr">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em"
+                        width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+                        </path>
+                    </svg>
+                    +971552438530
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="tel:+971552438530" dir="ltr">
+                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                        stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+                    اتصل بنا
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:alaith.outlook.com" dir="ltr">
+                    <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                        </path>
+                    </svg>
+                    alaith.outlook.com
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
